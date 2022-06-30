@@ -1,0 +1,23 @@
+<p>chrismomchrischild works!</p>
+<form [formGroup] = "gameForm">
+    <div>
+        <label>Name:</label>
+        <input class="form-control" id="name" (input)="nameInput($event)" type="text">
+    </div>
+    <div>
+        <label>E-mail:</label>
+        <input class="form-control" id="email" (input)="emailInput($event)" type="email">
+        <button (click)="onAdd()">Add</button>
+    </div>
+    <div>
+        <button type="submit" class="submit-button" (click)="onSubmit()">Submit</button>
+    </div>
+
+   
+</form>
+
+
+<div *ngFor=" let i of nameList1 ; let x = index">
+   {{x+1}}: {{i.name}}
+</div>
+

@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import { FormBuilder, FormGroup } from '@angular/forms';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-root',
@@ -6,5 +8,21 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'app';
+  title = 'gameApp';
+  constructor(
+    private router: Router,
+  ){}
+  ngOnInIt(){
+
+  }
+
+  startGame(){
+    console.log("game starts")
+    this.router.navigate(['/chrismomchrischild'])
+  }
+
+  goBack(){
+    console.log("game ends")
+    this.router.navigate(['/back'])
+  }
 }
